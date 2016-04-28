@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your own message</title>
+</head>
+{% block body %}
+    <table>
+        {% for entry in entries %}
+            <tr>
+                <td><h2>{{ entry.sid }}</h2></td>
+            </tr>
+            <tr>
+                <td><h2>{{ entry.sname }}</h2></td>
+            </tr>
+            <tr>
+                <td><h2>{{ entry.sex }}</h2></td>
+            </tr>
+            <tr>
+                <td><h2>{{ entry.grade }}</h2></td>
+            </tr>
+            <tr>
+                <td><h2>{{ entry.college }}</h2></td>
+            </tr>
+            <tr>
+                <td><h2>{{ entry.major }}</h2></td>
+            </tr>
+            <tr>
+                <td><h2>{{ entry.inclass }}</h2></td>
+            </tr>
+            <tr>
+                <td><h2>{{ entry.len }}</h2></td>
+            </tr>
+        {% else %}
+            <em>Unbelievable. No entries here so far</em>
+        {% endfor %}
+    </table>
+{% endblock %}
+</html>

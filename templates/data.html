@@ -1,0 +1,29 @@
+<!doctype html>
+<title>Flaskr</title>
+<meta charset="utf-8">
+
+<form action="#" method="post">
+    <select name="qXndm_ys">
+        <option value="2015-2016">2015-2016</option>
+        <option value="2014-2015">2014-2015</option>
+        <option value="2013-2014">2013-2014</option>
+        <option value="2012-2013">2012-2013</option>
+    </select>
+    <select name="qXqdm_ys">
+        <option value="1">第一学期</option>
+        <option value="2">第二学期</option>
+    </select>
+    <button type="submit">Submit</button>
+</form>
+{% block body %}
+    <table>
+        {% for entry in entries %}
+            <tr>
+                <td><h2>{{ entry.title }}</h2></td>
+                <td><h2>{{ entry.text|safe }}</h2></td>
+            </tr>
+        {% else %}
+            <em>Unbelievable. No entries here so far</em>
+        {% endfor %}
+    </table>
+{% endblock %}
